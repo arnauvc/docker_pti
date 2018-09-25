@@ -8,6 +8,3 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, world.
-      - run:
-          name: Get Interactive prompt
-          command: /bin/ash      
