@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: penwrt-x86-generic-rootfsi:latest
+      - image: openwrt-x86-generic-rootfsi:latest
     steps:
       - checkout
       - run:
