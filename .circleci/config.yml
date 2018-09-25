@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: openwrt-x86-generic-rootfsi:latest
+      - image: zoobab/openwrt-x86-attitude:latest
     steps:
       - checkout
       - run:
