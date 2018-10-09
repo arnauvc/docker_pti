@@ -6,11 +6,11 @@ RUN 	mkdir /var/run
 #ADD	sysctl.conf /etc/sysctl.conf
 
 RUN	opkg update && \
-	opkg install bmx7 bmx7-uci-config 
+	opkg install bmx7 bmx7-uci-config luci-app-bmx7 
 
 USER root
 
-#RUN 	echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
+CMD ["/sbin/init"]
 
-# using exec format so that /sbin/init is proc 1 (see procd docs)
-CMD /sbin/init
+
+
