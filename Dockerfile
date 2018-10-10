@@ -9,7 +9,7 @@ RUN	chmod +x /bin/init_bmx7.sh
 
 RUN	opkg update && \
 	opkg install bmx7 bmx7-uci-config luci-app-bmx7 
-
+RUN	opkg install vim
 USER root
 
 CMD ["/sbin/init"]
