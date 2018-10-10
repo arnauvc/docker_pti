@@ -6,7 +6,7 @@ docker rmi rabbyte/docker_pti:latest
 
 for (( c = 1; c <= $1; c++));
 do	
-	docker run -t -d --privileged --name node_$c   rabbyte/docker_pti:latest  /bin/init_bmx7.sh
+	docker run -t -d --privileged --name node_$c   rabbyte/docker_pti:latest  
 
 done
 
