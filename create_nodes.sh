@@ -1,9 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 #Script de creacio dels contenidors per poder simular
 
 docker rm -f $(docker ps -aq)
+#docker rmi $(docker images -q)
+docker rmi rabbyte/docker_pti:latest
 
-docker rmi $(docker images -q)
+for (( c = 1; c <= $1; c++));
+do	
+	docker run -t -d --privileged --name node_$c   rabbyte/docker_pti:latest  /bin/init_bmx7.sh
 
-docker run -t -d --privileged rabbyte/docker_pti:latest  /bin/init_bmx7.sh
+done
+
 
