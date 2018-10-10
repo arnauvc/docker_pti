@@ -3,7 +3,6 @@ ADD openwrt-18.06.1-x86-generic-generic-rootfs.tar.gz /
 
 RUN 	mkdir /var/lock 
 RUN 	mkdir /var/run
-#ADD	sysctl.conf /etc/sysctl.conf
 
 ADD	init_bmx7.sh /bin/init_bmx7.sh
 RUN	chmod +x /bin/init_bmx7.sh

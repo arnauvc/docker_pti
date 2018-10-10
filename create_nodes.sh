@@ -2,7 +2,6 @@
 #Script de creacio dels contenidors per poder simular
 
 docker rm -f $(docker ps -aq)
-#docker rmi $(docker images -q)
 docker rmi rabbyte/docker_pti:latest
 
 for (( c = 1; c <= $1; c++));
