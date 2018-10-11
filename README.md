@@ -1,2 +1,3 @@
 # docker_pti
-OpenWRT Images with BMX6 and BMX7
+
+Create a topology of nodes emulating routers with OpenWrt and route packages throw them using bmx7
