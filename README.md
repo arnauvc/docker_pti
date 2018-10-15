@@ -2,7 +2,7 @@
 
 FIB-UPC College project. 
 Since the new version of BMX6, BMX7, has rolled out it's time to test whether the update was worth.
-For such manners we've come up with a way to test different topologies of routers in a fast and easy way. 
+For such purpose we've come up with a way to test different topologies of routers in a fast and easy way. 
 Based on Docker we've build a custom image of OpenWRT with BMX7 installed and a set of scripts to spawn containers.
 
 This guide only serves the purpose to explain how to deal with the containers but tells nothing about bmx7 per se.
