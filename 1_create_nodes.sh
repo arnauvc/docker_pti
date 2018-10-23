@@ -11,7 +11,7 @@ then
 
 	for (( c = 1; c <= $1; c++));
 	do
-		docker run -t -d --privileged --name node_$c --network xarxa_docker rabbyte/docker_pti:latest
+		docker run -t -d --privileged --name node_$c --network xarxa_docker --ip 170.30.$c.2   rabbyte/docker_pti:latest
 	done
 	exit 0
 else 

@@ -1,0 +1,9 @@
+Package: kmod-via-velocity
+Version: 4.14.63-1
+Depends: kernel (=4.14.63-1-e0646bb44880cd3467815ba26fd9c20c), kmod-lib-crc-ccitt
+Source: package/kernel/linux
+License: GPL-2.0
+Section: kernel
+Architecture: i386_pentium4
+Installed-Size: 15047
+Description:  Kernel modules for VIA Velocity Gigabit Ethernet chipsets
