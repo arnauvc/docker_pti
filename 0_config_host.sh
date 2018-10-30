@@ -1,18 +1,19 @@
 #!/bin/bash
 
 docker rm -f $(docker ps -aq) > /dev/null 2>&1
-docker rmi rabbyte/docker_pti:latest > /dev/null 2>&1
+#docker rmi $(docker images -aq) > /dev/null 2>&1
 
 network_name="client_network"
- for i in ` docker network inspect -f '{{range .Containers}}{{.Name}} {{end}}' $network_name `; do docker network disconnect -f $network_name $i; done;
+ for i in ` docker network inspect -f '{{range .Containers}}{{.Name}} {{end}}' $network_name > /dev/null 2>&1 `; do docker network disconnect -f $network_name $i; done;
 network_name="server_network"
- for i in ` docker network inspect -f '{{range .Containers}}{{.Name}} {{end}}' $network_name `; do docker network disconnect -f $network_name $i; done;
+ for i in ` docker network inspect -f '{{range .Containers}}{{.Name}} {{end}}' $network_name > /dev/null 2>&1 `; do docker network disconnect -f $network_name $i; done;
 network_name="router_network"
- for i in ` docker network inspect -f '{{range .Containers}}{{.Name}} {{end}}' $network_name `; do docker network disconnect -f $network_name $i; done;
+ for i in ` docker network inspect -f '{{range .Containers}}{{.Name}} {{end}}' $network_name > /dev/null 2>&1 `; do docker network disconnect -f $network_name $i; done;
 
-docker network rm client_network
-docker network rm server_network
-docker network rm router_network
+docker network rm client_network > /dev/null 2>&1
+docker network rm server_network > /dev/null 2>&1
+docker network rm router_network > /dev/null 2>&1
+
 
 
 if [ $# -ne 1 ]

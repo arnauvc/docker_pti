@@ -8,4 +8,6 @@ then
 ./1_1_create_server_side.sh 2
 ./2_config_nodes.sh 2
 ./3_run_nodes.sh 4
+./2_config_nodes.sh 2
+
 fi

@@ -1,4 +1,5 @@
 config dnsmasq
+	option ignore		1
 	option domainneeded	1
 	option boguspriv	1
 	option filterwin2k	0  # enable for dial on demand
@@ -22,12 +23,12 @@ config dnsmasq
 	option localservice	1  # disable to allow DNS requests from non-local subnets
 
 config dhcp lan
-	option ignore 	1
+	option ignore 		1
 	option interface	lan
 	option start 	100
 	option limit	150
 	option leasetime	12h
 
 config dhcp wan
-	ption ignore 	1
+	ption ignore 		1
 	option interface	wan

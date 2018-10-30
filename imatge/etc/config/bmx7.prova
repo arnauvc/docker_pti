@@ -1,0 +1,43 @@
+#config 'plugin'
+#        option 'plugin' 'bmx7_sms.so'
+
+config 'plugin'
+        option 'plugin' 'bmx7_config.so'
+
+
+config 'dev' 'mesh_1'
+        option 'dev' 'eth0.5'
+
+#config 'dev' 'mesh_2'
+        #option 'dev' 'wlan0'
+
+
+
+config 'plugin'
+        option 'plugin' 'bmx7_tun.so'
+
+config 'plugin'
+        option 'plugin' 'bmx7_topology.so'
+
+config 'unicastHna' 'prefixGlobal'
+	option 'unicastHna' 'fd8a:490:1010:1101::/48'
+
+#config 'plugin'
+#        option 'plugin' 'bmx7_table.so'
+
+
+config 'tunDev' default
+        option 'tunDev' 'MeuPrefixIpV4'
+        option 'tun6Address' 'fd8a:490:1010:1100::2/64'
+        option 'tun4Address' '170.30.1.0/24'
+
+
+#config 'tunOut'
+#        option 'tunOut' 'ip6'
+#        option 'network' '2012::/16'
+#        option 'exportDistance' '0'
+
+#config 'tunOut'
+#        option 'tunOut' 'ip4'
+#        option 'network' '10.0.0.0/9'
+#        option 'minPrefixLen' '27'
