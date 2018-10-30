@@ -5,7 +5,8 @@ RUN 	mkdir /var/lock
 RUN 	mkdir /var/run
 
 RUN	opkg update && \
-	opkg install bmx7 bmx7-uci-config luci-app-bmx7 vim  && \
+	opkg list | grep -i bmx7 | awk '{print $1}' | xargs opkg install && \
+	opkg install vim && \
 	opkg update
 
 USER root
