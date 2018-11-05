@@ -27,6 +27,9 @@ then
 	docker network connect router_network node_2
 	docker network disconnect router_network node_3
 	docker network connect router_network node_3
+	
+	docker network disconnect router_network node_5
+	docker network connect router_network node_5
 
 
 	exit 0

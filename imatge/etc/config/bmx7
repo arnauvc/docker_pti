@@ -16,10 +16,10 @@ config 'plugin'
 
 
 config 'dev' 'mesh_1'
-        option 'dev' 'eth2'
+        option 'dev' 'eth1'
 
 config 'dev' 'mesh_2'
-        option 'dev' 'eth3'
+        option 'dev' 'eth2'
 
 
 

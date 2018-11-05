@@ -6,12 +6,9 @@ display_usage() {
 
 if [ $# -eq 1 ]
 then
-	docker rm -f $(docker ps -aq) > /dev/null 2>&1
-	docker rmi rabbyte/docker_pti:latest > /dev/null 2>&1
-
 	for (( c = 1; c <= $1; c++));
 	do
-		docker run -t -d --privileged --name node_$c --network xarxa_docker --ip 170.30.$c.2   rabbyte/docker_pti:latest
+		docker create -t --privileged --name node_$c --network route_network --ip 170.30.1.$c rabbyte/docker_pti:testing
 	done
 	exit 0
 else 
