@@ -74,12 +74,12 @@ docker exec -d server ip route del default
 docker exec -d server ip route add default via 10.0.3.3
 
 docker exec -d router_2 ip route del default
-docker exec -d router_2 bmx7 -c tunDev=Default /tun4Address=8.0.0.$c/32 /tun6Address=fd8a:0490:1010:1100::$c/64
+docker exec -d router_2 bmx7 -c tunDev=Default /tun4Address=8.0.0.2/32 /tun6Address=fd8a:0490:1010:1100::2/64
 docker exec -d router_2 bmx7 -c tunOut=v4Default /network=0.0.0.0/0 tunOut=v6Default /network=::/0
 docker exec -d router_2 bmx7 -c tunIn=def4Offer /n=10.0.2.0/24 /b=32000000
 
 docker exec -d router_3 ip route del default
-docker exec -d router_3 bmx7 -c tunDev=Default /tun4Address=8.0.0.$c/32 /tun6Address=fd8a:0490:1010:1100::$c/64
+docker exec -d router_3 bmx7 -c tunDev=Default /tun4Address=8.0.0.3/32 /tun6Address=fd8a:0490:1010:1100::3/64
 docker exec -d router_3 bmx7 -c tunOut=v4Default /network=0.0.0.0/0 tunOut=v6Default /network=::/0
 docker exec -d router_3 bmx7 -c tunIn=def4Offer /n=10.0.3.0/24 /b=32000000
 
