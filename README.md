@@ -8,19 +8,8 @@ Based on Docker we've build a custom image of OpenWRT with BMX7 installed and a 
 This guide only serves the purpose to explain how to deal with the containers but tells nothing about bmx7 per se.
 
 [DockerHub Repo](https://hub.docker.com/r/rabbyte/docker_pti/) You can download the images into docker using `docker pull rabbyte/docker_pti`.
-Though there's no need because the script will do it by itself.
 
-There're 4 major files:
-* 0_config_host
-* 1_create_nodes
-* 2_config_nodes
-* Dockerfile
+We are using gns3 2.1.11 to deal with network topologies and configurations. GSN3 offers the ability to import docker containers into the working area. Docker needs to be installed in the host machine for that to happend.
 
-0. **0_config_host**
-  Creates the underlaying network to allow the containers to communicate with each other and enables IPv6 addresses.
-  
-1. **1_create_nodes**
-  Needs the number of nodes you want to create as a parameter of the script. Before creating any node, it stops and deletes all containers running and deletes all images in the host. The pulls a fresh image from the online repo and builds as many containers as you specify
 
-2. **2_config_nodes**
-  Assigns every node to the aforementioned underlay network.
+
