@@ -29,7 +29,7 @@ docker create -t --privileged --name server  --network server_network --ip 10.0.
 #CREACIO DE ROUTERS
 for (( c = 2; c < $1 + 2; c++));
 do
-	docker create -t --privileged --name router_$c --network router_network --ip 8.0.0.$c  rabbyte/docker_pti:bmx6
+	docker create -t --privileged --name router_$c --network router_network --ip 8.0.0.$c  rabbyte/docker_pti:bmx7
 done
 
 #fi
