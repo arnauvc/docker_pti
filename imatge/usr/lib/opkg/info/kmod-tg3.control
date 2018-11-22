@@ -1,9 +1,0 @@
-Package: kmod-tg3
-Version: 4.14.63-1
-Depends: kernel (=4.14.63-1-e0646bb44880cd3467815ba26fd9c20c), kmod-libphy, kmod-ptp
-Source: package/kernel/linux
-License: GPL-2.0
-Section: kernel
-Architecture: i386_pentium4
-Installed-Size: 75239
-Description:  Kernel modules for Broadcom Tigon3 Gigabit Ethernet adapters
