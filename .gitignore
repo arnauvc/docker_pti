@@ -1,0 +1,6 @@
+#Ignore all scripts
+*.sh
+#Ignore all folders
+*/
+#Ignore base imatge .tar.gz
+base*
