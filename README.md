@@ -11,5 +11,5 @@ We are using gns3 2.1.11 to deal with network topologies and configurations. GSN
 
 Moreover there's a set of scripts to create containers in bulk and assign them to different networks. This option is currently not used since GNS3 does this for us.
 
-The tarball with the openwrt image is not a vanilla version from OpenWRT. There're some added scripts for benchmarking purposes and it has also suffered some kernel flag modifications for ease of setting up the testing environment and bmx7 requirements. 
+The tarball with the openwrt image is not a vanilla version of OpenWRT. There're some added scripts for benchmarking purposes and it has also suffered some kernel flag modifications for ease of setting up the testing environment and bmx7 requirements. 
 **Please, if you're looking for a OpenWRT imatge make sure to check out the official OpenWRT repo https://downloads.openwrt.org/**
